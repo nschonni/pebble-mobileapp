@@ -16,6 +16,8 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
           java-version: 21
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
       - name: Build XCFrameworks
         run: ./gradlew assembleXCFramework
 
@@ -67,6 +69,8 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
           java-version: 17
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
       - name: Checkout source
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
