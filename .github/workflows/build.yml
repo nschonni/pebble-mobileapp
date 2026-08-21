@@ -30,6 +30,8 @@ jobs:
           java-version: 17
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
+        with:
+          cache-provider: basic
       - name: Use dummy google-services json
         run: mv androidApp/src/google-services-dummy.json androidApp/src/google-services.json
       - name: Build and Test
@@ -53,6 +55,8 @@ jobs:
           java-version: 17
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@9c971963bec38e04b3d30dcc455b5382be2fdbfb # v6.3.0
+        with:
+          cache-provider: basic
       - name: Set up Xcode
         run: |
           ls /Applications/Xcode*
